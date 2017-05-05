@@ -1,0 +1,105 @@
+<!--搜索框-->
+<div class="list list-inset placeholder">
+    <label class="item item-input padding-left">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search">
+    </label>
+</div>
+
+<!--轮播-->
+<ion-slide-box auto-play="true"   slide-interval=3000  does-continue="true" delegate-handle="slideimgs"
+               class="slidebox"  on-slide-changed="slideHasChanged(index)" style="margin-top: -1px;">
+    <ion-slide>
+        <div class="box banner"><img class="img-responsive" src="img/YOR-Product-1701031.jpg"></div>
+    </ion-slide>
+    <ion-slide>
+        <div class="box banner"><img class="img-responsive" src="img/WITERIZED-STORY-161214.jpg"></div>
+    </ion-slide>
+    <ion-slide>
+        <div class="box banner"><img class="img-responsive" src="img/vintage-suede-161203.gif"></div>
+    </ion-slide>
+    <ion-slide>
+        <div class="box banner"><img class="img-responsive" src="img/Jp-bunney-161210.jpg"></div>
+    </ion-slide>
+    <ion-slide>
+        <div class="box banner"><img class="img-responsive" src="img/JP-Carousel-161223.jpg"></div>
+    </ion-slide>
+    <ion-slide>
+        <div class="box banner"><img class="img-responsive" src="img/rooster-black-pack-170103.jpg"></div>
+    </ion-slide>
+</ion-slide-box>
+
+<!--全部商品-->
+<div class="list list-inset">
+    <a class="item item-divider item-dark item-icon-left" href="#">
+        <span class="info-title">
+            <i class="icon ion-tshirt"></i>
+            全部商品
+        </span>
+    </a>
+</div>
+
+<div class="myrow">
+    <div class="mycol" ng-repeat="p in productList ">
+        <div class="list card" ui-sref="detail({id:p.pid})">
+            <a class="item item-image">
+                <img ng-src="{{p.pic}}">
+            </a>
+            <p class="pinfo pheight">{{p.pname}}</p>
+            <p class="pinfo">¥{{p.price}}</p>
+        </div>
+    </div>
+
+    <ion-infinite-scroll immediate-check="false" ng-if="hasMore" on-infinite="loadMore()"></ion-infinite-scroll>
+    <p class="text-center" ng-hide="hasMore">没有更多数据了</p>
+</div>
+
+<!--关注匡威-->
+<div class="list list-inset">
+    <a class="item item-divider item-dark item-icon-left" href="#">
+        <span class="info-title">
+            <i class="icon ion-ios-star"></i>
+            关注匡威
+        </span>
+    </a>
+</div>
+
+<div class="row m-follow">
+    <div class="col-25">
+        <a class="m-weibo" href="#"></a>
+    </div>
+    <div class="col-25">
+        <a class="m-wechat" href="#"></a>
+    </div>
+    <div class="col-25">
+        <a class="m-qqwb" href="#"></a>
+    </div>
+    <div class="col-25">
+        <a class="m-qqwb" href="#"></a>
+    </div>
+</div>
+
+<!--按钮条-->
+<div class="list list-inset">
+    <div class="button-bar">
+        <button class="button button-dark button-small">店铺</button>
+        <button class="button button-dark button-small">购物指南</button>
+        <a href="#myLogin" id="login-btn" class="button button-dark button-small">登录</a>
+    </div>
+</div>
+<!--footer-->
+<div class="footer">
+    <div class="container">
+        <ul class="list">
+            <li><a href="#">法律声明</a></li>
+            <li><a href="#">使用规则</a></li>
+        </ul>
+        <ul class="list to-top-parent">
+            <li class="to-top"><a ng-click="toTop()">回到顶部 <i class="icon ion-ios-arrow-up"></i></a></li>
+        </ul>
+        <div>
+            <span class="logo logo-footer"></span>
+        </div>
+        <p><a href="#">豫ICP备XXXXXXXX号</a></p>
+    </div>
+</div>

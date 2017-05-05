@@ -1,0 +1,137 @@
+<div class="container">
+    <div class="row" style="width:95%;margin:0 auto;">
+        <div class="col-75">
+            <h4>{{product.pname}}</h4>
+        </div>
+        <div class="col-25">
+            <h4 class="text-right margin-top">¥{{product.price}}</h4>
+            <input type="hidden" value="{{product.pid}}"/>
+        </div>
+    </div>
+    <div class="hr"></div>
+    <ion-slide-box slide-interval=3000  does-continue="true" delegate-handle="slideimgs"
+                   class="slidebox"  on-slide-changed="slideHasChanged(index)" style="margin-top: -1px;">
+        <ion-slide>
+            <div class="box banner"><img class="img-responsive" style="margin:0 auto" ng-src="{{picbefor}}1H_NEW{{picafter}}"></div>
+        </ion-slide>
+        <ion-slide>
+            <div class="box banner"><img class="img-responsive" style="margin:0 auto" ng-src="{{picbefor}}2H_NEW{{picafter}}"></div>
+        </ion-slide>
+        <ion-slide>
+            <div class="box banner"><img class="img-responsive" style="margin:0 auto" ng-src="{{picbefor}}3H_NEW{{picafter}}"></div>
+        </ion-slide>
+        <ion-slide>
+            <div class="box banner"><img class="img-responsive" style="margin:0 auto" ng-src="{{picbefor}}4H_NEW{{picafter}}"></div>
+        </ion-slide>
+        <ion-slide>
+            <div class="box banner"><img class="img-responsive" style="margin:0 auto" ng-src="{{picbefor}}5H_NEW{{picafter}}"></div>
+        </ion-slide>
+    </ion-slide-box>
+    <div class="row">
+        <div class="col-50">
+            <label class="item item-dark bg-black item-input input-style">
+                <span class="input-label light">尺码 |</span>
+                <input id="size" type="number" name="size" step="0.5" min="35" max="45"/>
+            </label>
+        </div>
+        <div class="col-50">
+            <label class="item item-dark bg-black item-input input-style">
+                <span class="input-label light">数量 |</span>
+                <input id="count" type="number" name="count" min="1" max="5"/>
+            </label>
+        </div>
+    </div>
+
+    <div class="text-center assertive">本鞋款尺码通常偏大，建议可选小半码</div>
+    <div class="row">
+        <div class="col col-margin">
+            <a class="button button-block button-assertive">
+                立即购买
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-margin">
+            <a ng-click="cartAdd()" class="button button-block button-assertive">
+                <i class="icon ion-plus"></i> 加入购物车
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-margin">
+            <a class="button button-block button-dark">
+                <i class="icon ion-plus"></i> 加入收藏
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-margin">
+            <a class="button button-block button-dark">
+                <i class="icon ion-plus"></i> 分享
+            </a>
+        </div>
+    </div>
+
+    <div class="hr"></div>
+
+    <!--相关产品-->
+    <div class="like-box">
+        <div class="row">
+            <div id="like-product" class="col-50 text-center like-title" ng-click="aboutProduct()">
+                <h5>相关产品</h5>
+            </div>
+            <div id="history-product" class="col-50 text-center no-active" ng-click="historyProduct()">
+                <h5>随便看看</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" ng-repeat="p in productList">
+                <dl ui-sref="detail({id:p.pid})">
+                    <dt class="dt-img">
+                        <img class="img-responsive" ng-src="{{p.pic}}">
+                    </dt>
+                    <dd class="dd-name"><h6>{{p.pname}}</h6></dd>
+                </dl>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="hr"></div>
+    <!--按钮条-->
+    <div class="list list-inset">
+        <div class="button-bar">
+            <button class="button button-dark button-small">店铺</button>
+            <button class="button button-dark button-small">购物指南</button>
+            <a href="#myLogin" id="login-btn" class="button button-dark button-small">登录</a>
+        </div>
+    </div>
+    <div class="hr"></div>
+</div>
+
+
+<!--footer-->
+<div class="footer">
+    <div class="container">
+        <ul class="list">
+            <li><a href="#">法律声明</a></li>
+            <li><a href="#">使用规则</a></li>
+        </ul>
+        <ul class="list to-top-parent">
+            <li class="to-top"><a ng-click="toTop()">回到顶部 <i class="icon ion-ios-arrow-up"></i></a></li>
+        </ul>
+        <div>
+            <span class="logo logo-footer"></span>
+        </div>
+        <p><a href="#">豫ICP备XXXXXXXX号</a></p>
+    </div>
+</div>
+
+<!--提示模态框-->
+<div class="my-modal" ng-show="isModelShow">
+    <div class="modal-content">
+        <h5 class="light">{{errTips}}</h5>
+        <button ng-click="closeModel()" class="button button-small">取消</button>
+        <button ng-click="closeModel()" class="button button-small button-assertive light">确定</button>
+    </div>
+</div>

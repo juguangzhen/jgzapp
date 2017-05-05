@@ -1,0 +1,328 @@
+body{
+    font-family: "Rockwell","fzlthjw","微软雅黑","Microsoft YaHei","黑体","SimHei";
+}
+.bg-black{
+    background: #000 !important;
+}
+.img-responsive{
+    display:block;
+    max-width:100%;
+    height:auto;
+}
+.logo{
+    display: block;
+    background: url("../img/sprites_header_footer.png") no-repeat 0 0 ;
+    width: 134px;
+    height:19px;
+    margin:0 auto;
+    margin-top:7px;
+}
+.close-left{
+    color:#fff !important;
+}
+.tips{
+    border-radius: 50%;
+    background: #fff;
+    color: #000;
+    height:15px;
+    width:15px;
+    text-align: center;
+    line-height: 15px;
+}
+/*图标们*/
+.m-follow{
+    height:80px;
+    margin:10px auto;
+    text-align: center;
+}
+.m-weibo,.m-wechat,.m-qqwb{
+    padding-left: 70px;
+    padding-bottom: 70px;
+    margin: 0.5em;
+}
+.m-weibo{
+    background: url("../img/img-social.jpg") no-repeat 0px 0;
+}
+.m-wechat{
+    background: url("../img/img-social.jpg") no-repeat -70px 0px;
+}
+.m-qqwb{
+    background: url("../img/img-social.jpg") no-repeat -140px 0px;
+}
+
+/*footer*/
+.footer{
+    background: #000;
+    text-align: center;
+    padding-top:0.5em;
+    padding-bottom: 0;
+}
+.footer div{
+    margin:1em auto;
+}
+.footer p{
+    margin-bottom: 0;
+}
+.footer a{
+    color:#fff;
+    font-size: 0.75em;
+    text-decoration: none;
+}
+.footer ul{
+    float: left;
+    margin-top:-1.5em;
+}
+.footer ul li{
+    float:left;
+    margin-left:1em;
+}
+.footer ul.to-top-parent{
+    float: right;
+    margin-top:-1.5em;
+}
+.to-top{
+    margin-right:1em;
+}
+.logo-footer{
+    margin:0 auto;
+}
+.button-bar button{
+    font-family: "Rockwell", "fzlthjw", "微软雅黑", "Microsoft YaHei", "黑体", "SimHei";
+    font-size: 0.85em;
+}
+
+/*我的栅格系统*/
+.myrow{
+    width:100%;
+    height:auto;
+    box-sizing: border-box;
+}
+.myrow:before{
+    content:"";
+    display: table;
+}
+.myrow:after{
+    content:"";
+    display: table;
+    clear: both;
+}
+.mycol{
+    float:left;
+    width: 50%;
+    box-sizing: border-box;
+}
+.pheight{
+    height: 60px;
+}
+.pinfo{
+    margin-top:3px;
+    margin-bottom: 3px;
+    padding:0px 8px;
+    font-size: 0.75em;
+}
+.info-title{
+    font-size:0.85em;
+}
+
+/*购物车内容样式*/
+.list .item h1,.list .item h2,
+.list .item h3,.list .item h4,
+.list .item h5,input,h1,h2,h3,h4,h5,h6,p,span,
+button
+{
+    font-family: "Rockwell", "fzlthjw", "微软雅黑", "Microsoft YaHei", "黑体", "SimHei" !important;
+}
+.operation{
+    padding:0;
+    height:30px;
+}
+.operation button{
+    font-size: 0.75em;
+    vertical-align: middle;
+}
+#account{
+    position:relative;
+    left:48%;
+    width:76.5px;
+}
+/*数量选择*/
+.shop-count{
+    margin-bottom: 2em;
+}
+.count-sel-box{
+    position: relative;
+    width: 98px;
+    height: 28px;
+    border: 1px solid #b7b7b7;
+}
+.count-sel-box input{
+    width: 67px;
+    border: none;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    vertical-align: top;
+    text-align: center;
+}
+.btnBox{
+    height: 27px;
+    border-left: 1px solid #b7b7b7;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+}
+.add{
+    display: block;
+    background: url("../img/detail/selectbg.png") no-repeat 0 0 transparent;
+    width: 100%;
+    position: absolute;
+    height:13px;
+    left: 0;
+    top: 0;
+    background-position: 8px 2px;
+    cursor: pointer;
+}
+.reduce{
+    display: block;
+    background: url("../img/detail/selectbg.png") no-repeat 0 -13px transparent;
+    width: 100%;
+    position: absolute;
+    height:14px;
+    left: 0;
+    bottom: 0;
+    top: auto;
+    background-position: 8px -10px;
+    cursor: pointer;
+}
+.delete-box{
+    height: 35px;
+    margin-top: -20px !important;
+}
+/*详情页*/
+.container{
+    width:95%;
+    margin:0 auto;
+}
+.margin-top{
+    margin-top:32%;
+}
+
+.hr{
+    background-color: #b7b7b7;
+    height: 1px;
+    width: 95%;
+    clear: both;
+    margin:10px auto;
+    position: relative;
+}
+.input-style{
+    padding: 0 0 0 15px !important;
+    border-radius: 5px;
+    margin-left:5px;
+    margin-right:5px;
+    border:none;
+}
+.input-style span{
+    font-size: 0.75em !important;
+}
+.input-style input{
+    color:#fff;
+}
+.col-margin{
+    margin-top:-8px;
+    margin-bottom:-15px;
+}
+.like-box{
+    width:95%;
+    margin:0 auto;
+    border:1px solid #b7b7b7;
+    border-radius: 5px;
+}
+.like-title{
+    border-right:1px solid #b7b7b7;
+}
+.no-active{
+    background: #d9d9d9;
+    border-bottom:1px solid #b7b7b7;
+}
+.dt-img{
+    padding-bottom:5px;
+}
+.dd-name{
+    padding-top:5px;
+    border-top:1px dotted #b7b7b7;
+}
+
+/*登录页面*/
+.my-input{
+    border: 1px solid #b7b7b7 !important;
+    border-radius: 3px !important;
+    padding: 0 10px !important;
+}
+.my-label{
+    overflow: inherit;
+}
+.vcode-box{
+    text-align: center;
+    margin-left: 5px;
+}
+.vcode{
+    cursor: pointer;
+}
+
+.gender-chose{
+    margin-top: 5px;
+    display: inline-block;
+}
+.check-gender{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #999;
+    cursor: pointer;
+}
+.check-gender-font{
+    display: inline-block;
+    margin-left: 1em;
+    position: relative;
+    top: -3px;
+    cursor: pointer;
+}
+.check-gender.chosen{
+    background: #333;
+    border: 1px solid #666;
+}
+
+/*注册页面*/
+.my-input1{
+    border: 1px solid #000 !important;
+    padding: 0 10px !important;
+    margin-left: 10px;
+}
+.padding-left{
+    padding-left:10px;
+}
+/*模态框*/
+.my-modal{
+    position:fixed;
+    background: rgba(0, 0, 0, 0.8);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.modal-content{
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-top:-60px;
+    margin-left:-41px;
+}
+.modal-content .button{
+    padding:3px 10px;
+}
+.modal-content .button-assertive{
+    margin-left:1em;
+}

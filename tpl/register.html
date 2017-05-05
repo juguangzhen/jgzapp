@@ -1,0 +1,87 @@
+<div class="row">
+    <div class="col text-center">
+        <img src="img/black-logo.jpg">
+    </div>
+</div>
+<p class="text-center">会员录入</p>
+<p class="text-center"><i class="icon ion-chevron-down"></i></p>
+<div class="row">
+    <div class="col">
+        <label class="item-input my-label">
+            姓名<span class="assertive">*&nbsp;</span>
+            <input id="nameReg" class="my-input1" type="text"/>
+            <i class="icon ion-checkmark-circled placeholder-icon assertive" style="display: none"></i>
+            <i class="icon ion-close-circled assertive" style="display: none"></i>
+        </label>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <label class="item-input my-label">
+            手机<span class="assertive">*&nbsp;</span>
+            <input id="phoneReg" class="my-input1" type="text" ng-model="user.uname"/>
+            <i class="icon ion-checkmark-circled placeholder-icon assertive" style="display: none"></i>
+            <i class="icon ion-close-circled assertive" style="display: none"></i>
+        </label>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <label class="item-input my-label">
+            邮箱<span class="assertive">*&nbsp;</span>
+            <input id="mailReg" class="my-input1" type="text" ng-model="user.upwd"/>
+            <i class="icon ion-checkmark-circled placeholder-icon assertive" style="display: none"></i>
+            <i class="icon ion-close-circled assertive" style="display: none"></i>
+        </label>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <label class="item-input my-label">
+            输入密码<span class="assertive">*&nbsp;</span>
+            <input id="pwdReg" class="my-input1" type="password"/>
+            <i class="icon ion-checkmark-circled placeholder-icon assertive" style="display: none"></i>
+            <i class="icon ion-close-circled assertive" style="display: none"></i>
+        </label>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <label class="item-input my-label">
+            确认密码<span class="assertive">*&nbsp;</span>
+            <input id="pwdAg" class="my-input1" type="password"/>
+            <i class="icon ion-checkmark-circled placeholder-icon assertive" style="display: none"></i>
+            <i class="icon ion-close-circled assertive" style="display: none"></i>
+        </label>
+    </div>
+</div>
+<div class="row">
+    <div class="col col-20 col-center">
+        验证码<span class="assertive">*&nbsp;</span>
+    </div>
+    <div class="col col-33">
+        <label class="item-input my-label">
+            <input class="my-input1" type="text" ng-model="user.vcode"/>
+        </label>
+    </div>
+    <div class="col vcode-box col-center">
+        <img class="vcode img-responsive" src="data/vcode.php" ng-click="vcode()">
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <h6>一旦登录，即表明你同意匡威的法律声明和使用规则</h6>
+    </div>
+</div>
+<button class="button button-full button-dark bg-black" ng-click="submitRegister()">
+    立即加入
+</button>
+
+<!--提示模态框-->
+<div class="my-modal" ng-show="isModelShow">
+    <div class="modal-content">
+        <h5 class="light">{{errTips}}</h5>
+        <button ng-click="closeModel()" class="button button-small">取消</button>
+        <button ng-click="closeModel()" class="button button-small button-assertive light">确定</button>
+    </div>
+</div>

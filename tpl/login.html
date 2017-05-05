@@ -1,0 +1,97 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h5>已经成为会员？</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label class="item-input">
+                <input id="phoneLogin" class="my-input" type="text" placeholder="手机" ng-model="user.uname"/>
+                <i class="icon ion-checkmark-circled placeholder-icon assertive" style="display: none"></i>
+                <i class="icon ion-close-circled assertive" style="display: none"></i>
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label class="item-input">
+                <input id="pwdLogin" class="my-input" type="password" placeholder="账号密码" ng-model="user.upwd"/>
+                <i class="icon ion-checkmark-circled placeholder-icon assertive" style="display: none"></i>
+                <i class="icon ion-close-circled assertive" style="display: none"></i>
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label class="item-input my-label">
+                <input class="my-input" type="text" placeholder="请输入验证码" ng-model="user.vcode"/>
+            </label>
+        </div>
+        <div class="col vcode-box col-center">
+            <img class="vcode img-responsive" src="data/vcode.php" ng-click="vcode()">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h6>一旦登录，即表明你同意匡威的法律声明和使用规则</h6>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button class="button button-dark button-block bg-black" ng-click="submitLogin()">立即登录</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="gender">
+                <p class="gender-chose">
+                    <span class="check-gender chosen"></span><span class="check-gender-font">保持登录状态</span>
+                </p>
+            </div>
+        </div>
+        <div class="col col-center text-center">
+            <p>忘记密码？</p>
+        </div>
+    </div>
+    <div class="hr"></div>
+    <div class="row">
+        <div class="col">
+            <button class="button button-dark button-block bg-black" ui-sref="register">立即注册</button>
+        </div>
+    </div>
+    <div class="hr"></div>
+    <div class="list list-inset">
+        <div class="button-bar">
+            <button class="button button-dark button-small">店铺</button>
+            <button class="button button-dark button-small">购物指南</button>
+            <a href="#myLogin" id="login-btn" class="button button-dark button-small">登录</a>
+        </div>
+    </div>
+    <div class="hr"></div>
+</div>
+<!--footer-->
+<div class="footer">
+    <div class="container">
+        <ul class="list">
+            <li><a href="#">法律声明</a></li>
+            <li><a href="#">使用规则</a></li>
+        </ul>
+        <ul class="list to-top-parent">
+            <li class="to-top"><a ng-click="toTop()">回到顶部 <i class="icon ion-ios-arrow-up"></i></a></li>
+        </ul>
+        <div>
+            <span class="logo logo-footer"></span>
+        </div>
+        <p><a href="#">沪ICP备11044134号-2</a></p>
+    </div>
+</div>
+
+<!--提示模态框-->
+<div class="my-modal" ng-show="isModelShow">
+    <div class="modal-content">
+        <h5 class="light">{{errTips}}</h5>
+        <button ng-click="closeModel()" class="button button-small">取消</button>
+        <button ng-click="closeModel()" class="button button-small button-assertive light">确定</button>
+    </div>
+</div>
